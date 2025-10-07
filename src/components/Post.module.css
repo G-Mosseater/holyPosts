@@ -1,0 +1,50 @@
+.postContainer {
+  margin: 1rem 0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: block;           /* fill available space */
+  cursor: pointer;          /* show pointer on hover */
+}
+
+.postContainer:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Link fills entire container */
+.link {
+  display: block;
+  padding: 1rem;
+  background-color: #e0daef;
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  animation: animate-in 1s ease-out forwards;
+}
+
+.name {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #23034d;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.description {
+  white-space: pre-wrap;
+  font-size: 1.25rem;
+  margin: 0.25rem 0 0 0;
+  color: #2E2E3A;
+  font-style: italic;
+}
+
+@keyframes animate-in {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

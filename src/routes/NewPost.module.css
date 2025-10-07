@@ -1,0 +1,95 @@
+.form {
+  background-color: #e0daef;
+  padding: 1rem;
+  width: 20rem;
+  border-radius: 8px;
+}
+
+.form label {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: #23034d;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.form textarea {
+  resize: vertical;
+  min-height: 3rem;
+  max-height: 10rem;
+  overflow: auto;
+}
+
+.form input,
+.form textarea {
+  display: block;
+  width: 100%;
+  font: inherit;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #dad1e7;
+  background-color: #f4f1fa;
+  color: #2e2e3a;
+  outline: none;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.form input:focus,
+.form textarea:focus {
+  border-color: #23034d;
+  box-shadow: 0 0 0 2px rgba(35, 3, 77, 0.2);
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.actions button {
+  cursor: pointer;
+  font: inherit;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #23034d;
+  color: #e0daef;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.actions button:hover {
+  background-color: #2e2e3a;
+  transform: scale(1.05);
+}
+
+.actions button[type="button"] {
+  background-color: transparent;
+  color: #23034d;
+  border: 1px solid #23034d;
+}
+
+.actions button[type="button"]:hover {
+  background-color: #23034d;
+  color: #e0daef;
+}
+
+.actions a {
+  display: inline-block;
+  text-decoration: none;
+  font: inherit;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  border: 1px solid #23034d;
+  background-color: transparent;
+  color: #23034d;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.actions a:hover {
+  background-color: #23034d;
+  color: #e0daef;
+  transform: scale(1.05);
+}
