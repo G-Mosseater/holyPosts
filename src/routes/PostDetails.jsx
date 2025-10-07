@@ -1,11 +1,20 @@
-import { useLoaderData, Link } from 'react-router-dom';
+import { useLoaderData, Link, useSubmit } from "react-router-dom";
 
-import Modal from '../components/Modal';
-import styles from './PostDetails.module.css';
+import Modal from "../components/Modal";
+import styles from "./PostDetails.module.css";
 
 function PostDetails() {
   const post = useLoaderData();
+  const submit = useSubmit();
 
+  const handleDelete = async () => {
+    const confirmed = window.confirm(
+      "Are you sure you want to delete this post?"
+    );
+    if (confirmed) {
+      submit(null, { method: "delete" });
+    }
+  };
   if (!post) {
     return (
       <Modal>
@@ -26,6 +35,15 @@ function PostDetails() {
       <main className={styles.details}>
         <p className={styles.name}>{post.name}</p>
         <p className={styles.text}>{post.description}</p>
+       
+    <div className={styles.buttonGroup}>
+      <Link to="/" className={styles.cancelButton}>
+        Cancel
+      </Link>
+      <button className={styles.deleteButton} onClick={handleDelete}>
+        Delete
+      </button>
+    </div>
       </main>
     </Modal>
   );

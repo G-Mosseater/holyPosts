@@ -5,7 +5,6 @@ import { Link, Form, useNavigation } from "react-router-dom";
 
 const NewPost = () => {
   const navigation = useNavigation();
-  console.log(navigation)
   const isSubmitting = navigation.state === "submitting";
   return (
     <>
@@ -21,7 +20,7 @@ const NewPost = () => {
             <input type="text" id="name" required name="name" />
           </p>
           <p className={styles.actions}>
-            <button disabed={isSubmitting}>
+            <button disabled={isSubmitting}>
               {isSubmitting ? " Submitting" : "Submit"}
             </button>
             <Link to="/">Cancel</Link>

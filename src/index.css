@@ -14,10 +14,8 @@
 
 body {
   margin: 0;
-  color:antiquewhite
+  color: antiquewhite;
 }
-
-
 
 * {
   box-sizing: border-box;

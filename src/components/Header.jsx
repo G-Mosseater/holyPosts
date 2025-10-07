@@ -1,4 +1,6 @@
-import { MdPostAdd, MdMessage } from 'react-icons/md';
+import { MdPostAdd } from 'react-icons/md';
+import { FaCross } from "react-icons/fa";
+
 import { Link } from 'react-router-dom';
 import styles from './Header.module.css';
 
@@ -6,7 +8,7 @@ function Header() {
   return (
     <header className={styles.header}>
       <h1 className={styles.logo}>
-        <MdMessage />
+<FaCross />
          Holy posts
       </h1>
       <p>

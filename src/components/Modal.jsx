@@ -1,15 +1,11 @@
 import styles from "./Modal.module.css";
 import { useNavigate } from "react-router-dom";
 
-
-const Modal = ({ children}) => {
-
-const navigate = useNavigate()
-function closeHandler() {
-  navigate('/')
-
-}
-
+const Modal = ({ children }) => {
+  const navigate = useNavigate();
+  function closeHandler() {
+    navigate("/");
+  }
 
   return (
     <>
@@ -21,6 +17,7 @@ function closeHandler() {
         >
           {children}
         </dialog>
+        <p></p>
       </div>
     </>
   );
