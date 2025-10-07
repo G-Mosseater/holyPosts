@@ -28,7 +28,7 @@ export async function postDetailsLoader({ params }) {
     .eq("id", params.id)
     .single();
   if (error) {
-    throw new Error("Could not find the post.");
+    throw new Error(error.message);
   }
   return post;
 }
