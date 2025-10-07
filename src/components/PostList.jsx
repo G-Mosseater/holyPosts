@@ -27,8 +27,18 @@ const PostList = () => {
         </div>
       )}
       <h2 style={{ textAlign: "center", color: "white" }}>
-        Holy Posts is a app to share and explore posts. Built with React, React
+        Holy Posts is an app to share and explore posts. Built with React, React
         Router (loaders & actions), Supabase, CSS Modules, JavaScript, and Vite.
+        The code can be found{" "}
+        <a
+          href="https://github.com/G-Mosseater/holyPosts/tree/main"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: "lightblue" }}
+        >
+          here
+        </a>
+        .
       </h2>
     </>
   );
